@@ -2,12 +2,8 @@
 
 
 # Node Backend for HTBLA Leonding Avatar
-```mermaid
-graph LR
-A(Website - Frontend) --> B{NodeJS - Dockerized}
-C(Pyramide - Playcanvas) --> B
-B --> D((Datenbanken))
-```
+<img src="https://i.imgur.com/TZ4Rpbm.png">
+
 ### Docker:
 #### docker-compose.yml
 ```yml
