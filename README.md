@@ -57,23 +57,7 @@ COPY . /home/node/app/
 EXPOSE 3000
 CMD [ "npm", "start" ]
 ``` 
-#### Package.json
-```json
-{
-  "name": "Leonie-Node",
-  "version": "1",
-  "description": "Backend for Leonie",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.15.5",
-    "socket.io": "^2.2.0"
-  }
-}
-```
+
 ---
 ## Server:
 #### NodeJS -> Dockered with docker-compose
@@ -102,4 +86,21 @@ app.post("/sendAnim", function(req, res) {
   res.send();
 });
 
+```
+#### Package.json
+```json
+{
+  "name": "Leonie-Node",
+  "version": "1",
+  "description": "Backend for Leonie",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.15.5",
+    "socket.io": "^2.2.0"
+  }
+}
 ```
