@@ -4,7 +4,7 @@
 # Node Backend for HTBLA Leonding Avatar
 <img src="https://i.imgur.com/TZ4Rpbm.png">
 
-### Docker:
+## Docker:
 #### docker-compose.yml
 ```yml
 version: '3'
@@ -74,7 +74,8 @@ CMD [ "npm", "start" ]
   }
 }
 ```
-### Server:
+---
+## Server:
 #### NodeJS -> Dockered with docker-compose
 #### Socket.io:
 ##### Init (Express + Socket IO):
