@@ -2,7 +2,7 @@
 
 
 # Node Backend for HTBLA Leonding Avatar
-<img src="https://i.imgur.com/TZ4Rpbm.png">
+<img src="https://i.imgur.com/Lax47pX.png">
 
 ## Docker:
 #### docker-compose.yml
