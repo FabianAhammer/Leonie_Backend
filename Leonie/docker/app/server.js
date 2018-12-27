@@ -1,8 +1,10 @@
 var express = require("express");
 var app = express();
 var http = require("http").Server(app);
-var io = require("socket.io")(http);
 var bodyParser = require("body-parser");
+
+const WebSocket = require("ws");
+const wss = new WebSocket.Server({ port: 8080 });
 
 app.use(
   bodyParser.urlencoded({
@@ -28,7 +30,11 @@ app.get("/", function(req, res) {
   res.send("<h1> Nothing here just a teapot </h1>");
 });
 app.post("/sendAnim", function(req, res) {
-  io.emit("anim", req.body.animation);
+  wss.clients.forEach(client => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(JSON.stringify({ animation: req.body.animation }));
+    }
+  });
   res.status(204);
   res.send();
 });
